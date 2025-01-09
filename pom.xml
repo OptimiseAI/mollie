@@ -6,7 +6,7 @@
 
     <groupId>be.woutschoovaerts</groupId>
     <artifactId>mollie</artifactId>
-    <version>4.5.2</version>
+    <version>4.6.0</version>
 
     <name>Mollie with Java</name>
     <description>Java framework to consume the Mollie API</description>
@@ -257,16 +257,18 @@
             </build>
         </profile>
     </profiles>
-
-    <distributionManagement>
-        <snapshotRepository>
-            <id>ossrh</id>
-            <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
-        </snapshotRepository>
-        <repository>
-            <id>ossrh</id>
-            <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-        </repository>
-    </distributionManagement>
+    <repositories>
+    <repository>
+      <id>OptimiseAI</id>
+      <url>https://maven.pkg.github.com/OptimiseAI/*</url>
+    </repository>
+  </repositories>
+ <distributionManagement>
+    <repository>
+      <id>OptimiseAI</id>
+      <name>OptimiseAI Common Package</name>
+      <url>https://maven.pkg.github.com/OptimiseAI/mollie</url>
+    </repository>
+  </distributionManagement>
 
 </project>
